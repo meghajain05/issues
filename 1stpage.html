@@ -5,6 +5,28 @@
 <link href="1stpage.css" rel="stylesheet"/>
 <link href="2ndpage.css" rel="stylesheet"/>
 <script src="jquery-1.12.1.js"></script>
+<script>
+
+$(document).ready(function(){
+    $(".b4").click(function(){
+        
+        $(".main").show();
+        $(".main1").hide();
+    });
+});
+$(document).ready(function(){
+    $(".b2").click(function(){
+        
+        $(".main1").show();
+        $(".main").hide();
+    });
+});
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        alert("successfuly registered");
+    });
+});
+</script>
 
 </head>
 <body>
@@ -21,18 +43,20 @@
 <div class="welcome">
 <header>Sign Up For Free</header>
 </div>
-
+<form id="form1" action="">
 <div class="inputfield">
-<input style="width: 198px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="text" placeholder=" First Name*" name="firstname">
-<input style="width: 198px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="text" placeholder=" Last Name*" name="lastname"><br/><br/>
-<input style="width: 403px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="text" placeholder=" Email Address*" name="mailid"> <br/><br/>
+
+<input style="width: 197px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="text" placeholder=" First Name*" name="firstname">
+<input style="width: 197px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="text" placeholder=" Last Name*" name="lastname"><br/><br/>
+<input style="width: 401px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="email" placeholder=" Email Address*" name="mailid"> <br/><br/>
 <input style="width: 402px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="password" placeholder=" Set A Password*" name="setapassword" ><br/><br/>
 <a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
 </div>
 <div class="login">
-<button id="btn1" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; color: white; ">Get Started</button> <br/>
+<button id="btn1" type="submit" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; color: white; ">Get Started</button> <br/>
 
 </div>
+</form>
 </div>
 </center>
 
@@ -47,28 +71,19 @@
 <div class="welcome">
 <header>Welcome Back!</header>
 </div>
-
+<form id="form" action="">
 <div class="inputfield">
 
-<input style="width: 400px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="text" placeholder=" Email Address*" name="mailid"> <br/><br/><br/>
+<input style="width: 400px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="email" placeholder=" Email Address*" name="mailid"> <br/><br/><br/>
 <input style="width: 400px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="password" placeholder=" Password*" name="password" ><br/><br/>
 <a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
 </div>
 <div class="login">
-<button id="btn1" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; color: white; ">LOG IN</button> <br/>
+<button id="btn1" type="submit" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; color: white; ">LOG IN</button> <br/>
 
 </div>
+</form>
 </div>
 </center>
-<script>
-$(document).ready(function(){
-    $(".b4").click(function(){
-        
-        $("#main").show();
-        $("#main1").hide();
-    });
-});
-</script>
-
 </body>
 </html>
