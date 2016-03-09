@@ -1,4 +1,4 @@
-.main{
+.main1{
 		width:500px;
 		height:500px;
 		border:1px solid black;
@@ -23,6 +23,7 @@
 	}
 	.login{
 		padding: 30px;
+		padding-top: 20px;
 	}
 	.button {
     background-color: #4CAF50; /* Green */
@@ -56,9 +57,9 @@
 		background-color: white;
 		color: black;
 	}
-	.b1{
+	.b3{
 		margin: 0 0 0 0;
        }
-.b2{
+.b4{
 	margin: 0 0 0 0;
 }
