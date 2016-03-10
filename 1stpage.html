@@ -12,33 +12,91 @@ $(document).ready(function(){
         
         $(".main").show();
         $(".main1").hide();
+         $(".b3").addClass('default');
+        $(".b3").removeClass('active');
+        $(".b4").removeClass('default');
+         $(".b4").addClass('active');
+
+        
+        
     });
 });
 $(document).ready(function(){
-    $(".b2").click(function(){
+    $(".b3").click(function(){
         
         $(".main1").show();
         $(".main").hide();
+        $(".b3").addClass('active');
+        $(".b3").removeClass('default');
+        $(".b4").removeClass('active');
+         $(".b4").addClass('default');
+       
     });
 });
-$(document).ready(function(){
-    $("#btn1").click(function(){
-        alert("successfuly registered");
-    });
-});
+
 </script>
+
+
+<script>
+$(document).ready(function(){
+$('#form1').submit(function() {
+    var error = 0;
+    var firstname = $('#firstname').val();
+    var lastname = $('#lastname').val();
+    var password= $('#password').val();
+    var email=$('#email').val();
+    if (firstname == '') {
+        error = 1;
+        alert('First Name cannot be empty');
+    }
+    if(lastname == ''){
+        error = 1;
+        alert('Last Name cannot be empty');
+    }
+     email = $(this);
+    email_regex = /^\b[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}\b$/i;
+    if(!email_regex.test(email.val()))
+    	{ alert('this is not valid email');
+    
+
+
+    //if (email != ){
+    //	error =1;
+    //	alert('Invalid email address');
+    }
+   if ($.trim(password).length <8  ) {
+      alert('Minimum password length required is 8');
+    }
+    if (!(password.match(/[A-Z]/))) {
+      alert('password should contain capital letter');
+    }
+    if (!(password.match(/[a-z]/))) {
+      alert('password should contain small and letter');
+    }
+    if (!(password.match(/[0-9]/))) {
+      alert('password should contain a numeric value');
+    }
+    
+    if(error){
+        return false;
+    }else{
+        return true;
+    }
+});
+});
+
+</script>
+
 
 </head>
 <body>
-
+<div class="req">
+<button class="button b3 active"  style="width: 190px; "  >Sign Up</button>
+<button class="button b4 default" style="width: 190px;" >Log In</button>
+</div>
 
 <center><div class="main1">
-<div class="signup">
-<button class="button b3"  style="width: 190px; background: white; color: black;" >Sign Up</button>
-<button class="button b4" style="width: 190px;" >Log In</button>
 
-
-</div>
 
 <div class="welcome">
 <header>Sign Up For Free</header>
@@ -46,10 +104,10 @@ $(document).ready(function(){
 <form id="form1" action="">
 <div class="inputfield">
 
-<input style="width: 197px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="text" placeholder=" First Name*" name="firstname">
-<input style="width: 197px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="text" placeholder=" Last Name*" name="lastname"><br/><br/>
-<input style="width: 401px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="email" placeholder=" Email Address*" name="mailid"> <br/><br/>
-<input style="width: 402px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="password" placeholder=" Set A Password*" name="setapassword" ><br/><br/>
+<input style="width: 197px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id="firstname" type="text" placeholder=" First Name*" name="firstname" >
+<input style="width: 197px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id"lastname" type="text" placeholder=" Last Name*" name="lastname" ><br/><br/>
+<input style="width: 401px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;"  id="email" type="text" placeholder=" Email Address*" name="mailid" > <br/><br/>
+<input style="width: 402px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id="password" type="password" placeholder=" Set A Password*" name="setapassword" ><br/><br/>
 <a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
 </div>
 <div class="login">
@@ -62,11 +120,11 @@ $(document).ready(function(){
 
 
 <center><div class="main" style="display: none;" >
-<div class="signup">
+<!--div class="signup">
 <button class="button b2" style="width: 190px;" >Sign Up</button>
 <button class="button b1" style="width: 190px; background: white; color: black;" >Log In</button>
 
-</div>
+</div-->
 
 <div class="welcome">
 <header>Welcome Back!</header>
@@ -74,12 +132,12 @@ $(document).ready(function(){
 <form id="form" action="">
 <div class="inputfield">
 
-<input style="width: 400px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="email" placeholder=" Email Address*" name="mailid"> <br/><br/><br/>
-<input style="width: 400px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" type="password" placeholder=" Password*" name="password" ><br/><br/>
+<input style="width: 400px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id="email" type="email" placeholder=" Email Address*" name="mailid" > <br/><br/><br/>
+<input style="width: 400px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id="password" type="password" placeholder=" Password*" name="password" ><br/><br/>
 <a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
 </div>
 <div class="login">
-<button id="btn1" type="submit" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; color: white; ">LOG IN</button> <br/>
+<a href="homepage.html"> <button id="btn2" type="submit" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; color: white; ">LOG IN</button></a>
 
 </div>
 </form>

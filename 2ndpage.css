@@ -26,9 +26,9 @@
 		padding-top: 20px;
 	}
 	.button {
-    background-color: #4CAF50; /* Green */
+    /*background-color: #4CAF50; /* Green */
     border: none;
-    color: white;
+    /*color: white;*/
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -49,14 +49,14 @@
 		border: 4px solid #1e7b1e;
 		float: left;
 	}*/
-	.button:hover{
+	/*.button:hover{
 		background-color: white;
 		color: black;
 	}
 	.button:active{
 		background-color: white;
 		color: black;
-	}
+	}*/
 	.b3{
 		margin: 0 0 0 0;
        }
