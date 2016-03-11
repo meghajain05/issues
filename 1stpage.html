@@ -53,17 +53,37 @@ $('#form1').submit(function() {
         error = 1;
         alert('Last Name cannot be empty');
     }
-     email = $(this);
-    email_regex = /^\b[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}\b$/i;
-    if(!email_regex.test(email.val()))
-    	{ alert('this is not valid email');
+
+
+    
+    var atpos=email.indexOf("@");
+    var dotpos=email.lastIndexOf(".");
+
+    if(email=="")
+    {
+    	alert("email can't b blank");
+    }
+    if(!(email)=="@")
+    {
+    	alert("email should contain @");
+    }
+    if(atpos<1)
+    {
+    	alert("there should be more than 1 letter before @");
+    }
+    if(dotpos-atpos<5)
+    {
+    	alert("There should be more than 5 letters before '.'");
+    }
+
+
     
 
 
     //if (email != ){
     //	error =1;
     //	alert('Invalid email address');
-    }
+    
    if ($.trim(password).length <8  ) {
       alert('Minimum password length required is 8');
     }
@@ -71,7 +91,7 @@ $('#form1').submit(function() {
       alert('password should contain capital letter');
     }
     if (!(password.match(/[a-z]/))) {
-      alert('password should contain small and letter');
+      alert('password should contain small letter');
     }
     if (!(password.match(/[0-9]/))) {
       alert('password should contain a numeric value');
@@ -90,6 +110,7 @@ $('#form1').submit(function() {
 
 </head>
 <body>
+
 <div class="req">
 <button class="button b3 active"  style="width: 190px; "  >Sign Up</button>
 <button class="button b4 default" style="width: 190px;" >Log In</button>
@@ -104,14 +125,14 @@ $('#form1').submit(function() {
 <form id="form1" action="">
 <div class="inputfield">
 
-<input style="width: 197px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id="firstname" type="text" placeholder=" First Name*" name="firstname" >
-<input style="width: 197px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id"lastname" type="text" placeholder=" Last Name*" name="lastname" ><br/><br/>
-<input style="width: 401px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;"  id="email" type="text" placeholder=" Email Address*" name="mailid" > <br/><br/>
-<input style="width: 402px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id="password" type="password" placeholder=" Set A Password*" name="setapassword" ><br/><br/>
+<input style="width: 197px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia; " id="firstname" type="text" placeholder=" First Name*" name="firstname" >
+<input style="width: 197px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id"lastname" type="text" placeholder=" Last Name*" name="lastname" ><br/><br/>
+<input style="width: 401px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;"  id="email" type="text" placeholder=" Email Address*" name="mailid" > <br/><br/>
+<input style="width: 402px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id="password" type="password" placeholder=" Set A Password*" name="setapassword" ><br/><br/>
 <a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
 </div>
 <div class="login">
-<button id="btn1" type="submit" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; color: white; ">Get Started</button> <br/>
+<button id="btn1" type="submit" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; outline: none; color: white; border-radius: 4px; font-family: georgia;">GET STARTED</button> <br/>
 
 </div>
 </form>
@@ -129,19 +150,20 @@ $('#form1').submit(function() {
 <div class="welcome">
 <header>Welcome Back!</header>
 </div>
-<form id="form" action="">
+<form id="form1" action="">
 <div class="inputfield">
 
-<input style="width: 400px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id="email" type="email" placeholder=" Email Address*" name="mailid" > <br/><br/><br/>
-<input style="width: 400px; height: 30px; background-color: rgb(17, 17, 9); border: 1px solid white; color: white;" id="password" type="password" placeholder=" Password*" name="password" ><br/><br/>
+<input style="width: 400px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id="email" type="email" placeholder=" Email Address*" name="mailid" > <br/><br/><br/>
+<input style="width: 400px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id="password" type="password" placeholder=" Password*" name="password" ><br/><br/>
 <a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
 </div>
 <div class="login">
-<a href="homepage.html"> <button id="btn2" type="submit" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; color: white; ">LOG IN</button></a>
+ <button id="btn2" type="submit" style="background-color: #1e7b1e; height: 35px; width: 400px; border:#1e7b1e; outline: none; color: white; border-radius: 4px; font-family: georgia;">LOG IN</button>
 
 </div>
 </form>
 </div>
 </center>
+
 </body>
 </html>
