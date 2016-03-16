@@ -1,33 +1,35 @@
+
 .req{ 
 	
 		padding-left: 36%;
 		padding-right: 57px;
         padding-top: 40px;
-        position: absolute;
+        position: relative;
         font-family: georgia;
+        position: absolute;
+        display: inline;
+        z-index: 1;
+
 
 }
 .main{
 		width:500px;
 		height:500px;
 		border:1px solid black;
-		/*border-style: groove;*/
-		/*background-color: rgb(17, 17, 9);*/
+		
         border-radius: 4px;
         background-color: #262626;
         font-family: georgia;
+        position: relative;
+        align-content: center;
+        margin-top: 100px;
+        
 	}
-	.signup{
-		padding-top: 54px;
-		padding-left: 50px;
-		padding-right: 57px;
-		font-family: georgia;
-
-	}
+	
 	.welcome{
-		padding: 63px;
+		padding: 53px;
 		padding-bottom: 47px;
-		padding-top: 170px;
+		padding-top: 150px;
 		color: white;
 		font-size: 24px;
 		font-family: georgia;
@@ -42,14 +44,7 @@
 		font-family: georgia;
 	}
 	
-	/*.button:hover{
-		background-color: white;
-		color: black;
-	}
-	.button:active{
-		background-color: white;
-		color: black;
-	}*/
+	
 	.b1{
 		margin: 0 0 0 0;
        }
