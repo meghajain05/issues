@@ -7,11 +7,13 @@
 		font-family: georgia;
 		position: relative;
 		margin-top: 100px;
+		 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	}
 	.login{
 		padding: 30px;
 		padding-top: 10px;
 		font-family: georgia;
+		font-size: 24px;
 	}
 	.button {
     border: none;
@@ -19,10 +21,11 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     float: left;
     font-family: georgia;
+
 
 }
 		.b3{

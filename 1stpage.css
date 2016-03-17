@@ -11,12 +11,13 @@
         z-index: 1;
 
 
+
 }
 .main{
 		width:500px;
 		height:500px;
 		border:1px solid black;
-		
+		 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border-radius: 4px;
         background-color: #262626;
         font-family: georgia;
@@ -33,6 +34,7 @@
 		color: white;
 		font-size: 24px;
 		font-family: georgia;
+		text-shadow: 0 0 10px grey;
 	}
 	.inputfield{
 		padding: 40px;
@@ -42,6 +44,7 @@
 	.login{
 		padding: 40px;
 		font-family: georgia;
+		font-size: 17px;
 	}
 	
 	
@@ -58,8 +61,7 @@
 	color: black;
 	border-radius: 4px;
 	outline: none;
-
-
+	text-shadow: 2px 2px 8px grey;
 }
 
 .default {
@@ -67,4 +69,5 @@
 	color: white;
 	border-radius: 4px;
 	outline: none;
+	text-shadow: 2px 2px 4px #000000;
 }
