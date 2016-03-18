@@ -12,13 +12,10 @@ $(document).ready(function(){
         
         $(".main").show();
         $(".main1").hide();
-         $(".b3").addClass('default');
+        $(".b3").addClass('default');
         $(".b3").removeClass('active');
         $(".b4").removeClass('default');
-         $(".b4").addClass('active');
-
-        
-        
+        $(".b4").addClass('active');        
     });
 });
 $(document).ready(function(){
@@ -29,14 +26,10 @@ $(document).ready(function(){
         $(".b3").addClass('active');
         $(".b3").removeClass('default');
         $(".b4").removeClass('active');
-         $(".b4").addClass('default');
-       
+        $(".b4").addClass('default');       
     });
 });
-
 </script>
-
-
 <script>
 
 $(document).ready(function(){
@@ -46,114 +39,108 @@ $('#form1').submit(function() {
     var lastname = $('#lastname').val();
     var password= $('#password').val();
     var email=$('#email').val();
-    if (firstname == '') {
-        error = 1;
-        alert('First Name cannot be empty');
-    }
-    if(lastname == ''){
-        error = 1;
-        alert('Last Name cannot be empty');
-    }
-
-
-    
+        if (firstname == '') {
+            error = 1;
+            alert('First Name cannot be empty');
+        }
+        if(lastname == ''){
+            error = 1;
+            alert('Last Name cannot be empty');
+        }
     var atpos=email.indexOf("@");
     var dotpos=email.lastIndexOf(".");
 
-    if(email=="")
-    {
-    	alert("email can't b blank");
-    }
-    if(!(email)=="@")
-    {
-    	alert("email should contain @");
-    }
-    if(atpos<1)
-    {
-    	alert("there should be more than 1 letter before @");
-    }
-    if(dotpos-atpos<5)
-    {
-    	alert("There should be more than 5 letters before '.'");
-    }
+        if(email=="")
+        {
+    	   alert("email can't b blank");
+        }
+        if(!(email)=="@")
+        {
+    	   alert("email should contain @");
+        }
+        if(atpos<1)
+        {
+    	   alert("there should be more than 1 letter before @");
+        }
+        if(dotpos-atpos<5)
+        {
+    	   alert("There should be more than 5 letters before '.'");
+        }
 
 
     
-   if ($.trim(password).length <8  ) {
-      alert('Minimum password length required is 8');
-    }
-    if (!(password.match(/[A-Z]/))) {
-      alert('password should contain capital letter');
-    }
-    if (!(password.match(/[a-z]/))) {
-      alert('password should contain small letter');
-    }
-    if (!(password.match(/[0-9]/))) {
-      alert('password should contain a numeric value');
-    }
+        if ($.trim(password).length <8  ) {
+            alert('Minimum password length required is 8');
+        }
+        if (!(password.match(/[A-Z]/))) {
+            alert('password should contain capital letter');
+        }
+        if (!(password.match(/[a-z]/))) {
+            alert('password should contain small letter');
+        }
+        if (!(password.match(/[0-9]/))) {
+            alert('password should contain a numeric value');
+        }
     
-    if(error){
-        return false;
-    }else{
-        return true;
-    }
+        if(error){
+            return false;
+        }
+        else{
+            return true;
+        }
+    });
 });
-});
-
 </script>
+
 <noscript>Sorry, your browser does not support JQuery</noscript>
-
 </head>
+
 <body style="background-image: url(bg.jpg)">
+    <div class="req">
+        <button class="button b3 active"  style="width: 190px; "  ><strong>Sign Up</strong></button>
+        <button class="button b4 default" style="width: 190px;" ><strong>Log In</strong></button>
+    </div>
 
-<div class="req">
-<button class="button b3 active"  style="width: 190px; "  ><strong>Sign Up</strong></button>
-<button class="button b4 default" style="width: 190px;" ><strong>Log In</strong></button>
-</div>
+    <center>
+    <div class="main1">
+        <div class="welcome">
+            <header><strong><em>Sign Up For Free</em></strong></header>
+        </div>
+        <form id="form1" action="">
+        <div class="inputfield">
 
-<center><div class="main1">
-
-
-<div class="welcome">
-<header><strong><em>Sign Up For Free</em></strong></header>
-</div>
-<form id="form1" action="">
-<div class="inputfield">
-
-<input style="width: 197px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia; " id="firstname" type="text" placeholder=" First Name*" name="firstname" title="it cannot be empty" required="" >
-<input style="width: 197px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id"lastname" type="text" placeholder=" Last Name*" name="lastname" title="it cannot be empty" required=""><br/><br/>
-<input style="width: 402px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;"  id="email" type="text" placeholder=" Email Address*" name="mailid" title="it should be of type example@gmail.com" required=""> <br/><br/>
-<input style="width: 402px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id="password" type="password" placeholder=" Set A Password*" name="setapassword" title="it should contain numeric values, capital and small letters" required=""><br/><br/>
-<a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
-</div>
-<div class="login">
-<button id="btn1" type="submit" style="background-color: #1e7b1e; height: 38px; width: 400px; border:#1e7b1e; outline: none; color: white; border-radius: 4px; font-family: georgia; font-size: 18px;"><strong>Get Started</strong></button> <br/>
-
-</div>
-</form>
-</div>
-</center>
+            <input style="width: 197px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia; " id="firstname" type="text" placeholder=" First Name*" name="firstname" title="it cannot be empty" required="">
+            <input style="width: 197px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id"lastname" type="text" placeholder=" Last Name*" name="lastname" title="it cannot be empty" required=""><br/><br/>
+            <input style="width: 402px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;"  id="email" type="text" placeholder=" Email Address*" name="mailid" title="it should be of type example@gmail.com" required=""> <br/><br/>
+            <input style="width: 402px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id="password" type="password" placeholder=" Set A Password*" name="setapassword" title="it should contain numeric values, capital and small letters" required=""><br/><br/>
+            <a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
+        </div>
+        <div class="login">
+            <button id="btn1" type="submit" style="background-color: #1e7b1e; height: 38px; width: 400px; border:#1e7b1e; outline: none; color: white; border-radius: 4px; font-family: georgia; font-size: 18px;"><strong>Get Started</strong></button> <br/>
+        </div>
+        </form>
+    </div>
+    </center>
 
 
-<center><div class="main" style="display: none;" >
+    <center>
+    <div class="main" style="display: none;" >
+        <div class="welcome">
+        <header><strong><em> Welcome Back!</em></strong></header>
+        </div>
+        <form id="form1" action="">
+            <div class="inputfield">
 
-<div class="welcome">
-<header><strong><em> Welcome Back!</em></strong></header>
-</div>
-<form id="form1" action="">
-<div class="inputfield">
+                <input style="width: 400px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id="email" type="email" placeholder=" Email Address*" name="mailid" title="it should be of type example@gmail.com" required=""> <br/><br/><br/>
+                <input style="width: 400px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id="password" type="password" placeholder=" Password*" name="password" title="it cannot be empty" required=""><br/><br/>
+                <a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
+            </div>
+            <div class="login">
+                <button id="btn2" type="submit" style="background-color: #1e7b1e; height: 38px; width: 400px; border:#1e7b1e; outline: none; color: white; border-radius: 4px; font-family: georgia; font-size: 18px;"><strong>Log In</strong></button>
 
-<input style="width: 400px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id="email" type="email" placeholder=" Email Address*" name="mailid" title="it should be of type example@gmail.com" required=""> <br/><br/><br/>
-<input style="width: 400px; height: 30px; background-color: #262626; border: 1px solid white; outline: none; color: white; font-family: georgia;" id="password" type="password" placeholder=" Password*" name="password" title="it cannot be empty" required=""><br/><br/>
-<a href="" style="color: #1e7b1e; float: right; text-decoration: none;" >Forgot Password?</a>
-</div>
-<div class="login">
- <button id="btn2" type="submit" style="background-color: #1e7b1e; height: 38px; width: 400px; border:#1e7b1e; outline: none; color: white; border-radius: 4px; font-family: georgia; font-size: 18px;"><strong>Log In</strong></button>
-
-</div>
-</form>
-</div>
-</center>
-
+            </div>
+        </form>
+    </div>
+    </center>
 </body>
 </html>
